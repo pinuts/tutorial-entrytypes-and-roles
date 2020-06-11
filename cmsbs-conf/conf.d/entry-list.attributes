@@ -1,0 +1,3 @@
+area.ListUsers.columns = Name Email
+area.ListUsers.column.Name.title = Name
+area.ListUsers.column.Name.display = {switch:entrytype:e:{firstname} {lastname} ({uid}):c:{firstname} {lastname} ({email}):t:{registration_number}:s:{company} ({uid})}
