@@ -16,6 +16,8 @@ startUm.dependsOn << umSchemaUpdate
 run.dependsOn << umSchemaUpdate
 
 setup.doLast {
+    ln('cmsbs-conf/cse/plugins/de.pinuts.tutorial', pinuts.um.pluginsDir)
+
     fileTree('cmsbs-conf/conf.d').each {target ->
         ln(target, pinuts.um.confdDir)
     }

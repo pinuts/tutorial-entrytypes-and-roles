@@ -377,4 +377,5 @@
 /// <reference path="../../UM/cmsbs-conf/cse/plugins/de.pinuts.cmsbs.dev.cseconsole/callback/callback.js" />
 /// <reference path="../../UM/cmsbs-conf/cse/plugins/de.pinuts.cmsbs.dev.cseconsole/wizard/controllers/CseConsole.js" />
 /// <reference path="../../UM/cmsbs-conf/cse/plugins/de.pinuts.cmsbs.dev.cseconsole/wizard/controllers/LocalesController.js" />
+/// <reference path="../../UM/cmsbs-conf/cse/plugins/de.pinuts.tutorial/callback/post-login.es6" />
 /// <reference path="../../UM/cmsbs-work/cse/UM.d.ts" />
