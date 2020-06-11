@@ -1,0 +1,6 @@
+stages:
+    - Test
+    - Snapshot
+    - Release
+
+
