@@ -16,8 +16,6 @@ startUm.dependsOn << umSchemaUpdate
 run.dependsOn << umSchemaUpdate
 
 setup.doLast {
-    // ln('cmsbs-conf/cse/plugins/de.pinuts.myapp', pinuts.um.pluginsDir)
-
     fileTree('cmsbs-conf/conf.d').each {target ->
         ln(target, pinuts.um.confdDir)
     }
@@ -25,8 +23,8 @@ setup.doLast {
         ln(target, pinuts.um.confdDir)
     }
 
-    // ln('cmsbs-conf/adminRoles', pinuts.um.cmsbsConfDir)
-    // ln('cmsbs-conf/entryTypes', pinuts.um.cmsbsConfDir)
+    ln('cmsbs-conf/adminRoles', pinuts.um.cmsbsConfDir)
+    ln('cmsbs-conf/entryTypes', pinuts.um.cmsbsConfDir)
 }
 
 setup.finalizedBy vscode

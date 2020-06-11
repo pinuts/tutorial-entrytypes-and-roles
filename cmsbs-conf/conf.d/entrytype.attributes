@@ -1,0 +1,11 @@
+additional.attributes[]    = entrytype
+grp.std_personal.members[] = entrytype
+
+entrytype.title.de         = Entry Type
+entrytype.dbSize           = 8
+entrytype.isPrimary        = true
+entrytype.values           = e s c t
+entrytype.value.e          = Employee
+entrytype.value.s          = Shipping Company
+entrytype.value.c          = Customer
+entrytype.value.t          = Truck

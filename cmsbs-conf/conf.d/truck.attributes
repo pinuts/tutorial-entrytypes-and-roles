@@ -1,0 +1,11 @@
+registration_number.type = STRING
+registration_number.title = Registration number
+additional.attributes[] = registration_number
+
+max_payload.type = INTEGER
+max_payload.title = Max. payload in kg
+additional.attributes[] = max_payload
+
+attribute.groups[] = truck
+grp.truck.members = registration_number max_payload
+grp.truck.title = Truck
