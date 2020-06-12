@@ -1,4 +1,4 @@
-See [Entry Types and Admin Roles](https://pinutswiki.atlassian.net/wiki/x/NoCNX) on this topic.
+See [Entry Types and Admin Roles](https://pinutswiki.atlassian.net/wiki/x/cgCMX) on this topic.
 
 ## Quick start
 Copy your development license file to `env/devel/cmsbs-conf`:
