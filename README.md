@@ -11,4 +11,4 @@ Install and run Universal Messenger:
 gradle setup run
 ```
 
-Login: http://localhost:8080/cmsbs
+Login: http://localhost:8080/cmsbs (`admin` / `admin`)
