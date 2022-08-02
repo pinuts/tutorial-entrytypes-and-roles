@@ -2,9 +2,9 @@ FROM openjdk:11.0-jdk
 
 RUN adduser --system --disabled-password --home /UM --shell /bin/bash --uid 102 um
 
-COPY build/UM-current.sh .um.varfile /
-COPY .docker-entrypoint.sh /UM/docker-entrypoint.sh
-RUN chown -R um /UM
+COPY --chown=um:nogroup build/UM-current.sh .um.varfile /
+COPY --chown=um:nogroup .docker-entrypoint.sh /UM/docker-entrypoint.sh
+RUN chmod +x /UM/docker-entrypoint.sh
 
 WORKDIR /UM
 USER um
@@ -26,10 +26,9 @@ RUN adduser --system --disabled-password --home /UM --shell /bin/bash um
 ENV TZ=Europe/Berlin
 ENV LC_LOCALE=C.UTF-8
 
-COPY --from=0 /UM /UM/
-COPY build/current.zip /UM/um-project.zip
-RUN chown -R um.nogroup /UM
+COPY --chown=um:nogroup --from=0 /UM /UM/
+COPY --chown=um:nogroup build/current.zip /UM/um-project.zip
 
-VOLUME [ "/UM/cmsbs-work", "/UM/cmsbs-persistent-conf" ]
+VOLUME [ "/UM/cmsbs-work" ]
 
 ENTRYPOINT ["/UM/docker-entrypoint.sh"]

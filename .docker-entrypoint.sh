@@ -1,15 +1,5 @@
 #!/bin/bash -e
 
-random_string() {
-    length=$1
-    cat /dev/urandom | tr -cd 'a-z0-9' | head -c $length
-}
-
-random_int() {
-    digits=$1
-    cat /dev/urandom | tr -cd '0-9' | head -c $digits
-}
-
 create_docker_properties_file() {
     f=$1
     echo "* Creating $f"
