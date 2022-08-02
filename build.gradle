@@ -3,8 +3,8 @@ apply from: '.umstarter.gradle'
 // Siehe Kickstarter.md für Beispiele und Erklärungen.
 
 dependencies {
-    runtime('de.pinuts.cmsbs:UM:7.44.0')
-    runtime('de.pinuts.cmsbs:CseConsole:7.32.0')
+    runtime('de.pinuts.cmsbs:UM:7.47.0')
+    runtime('de.pinuts.cmsbs:CseConsole:7.32.3')
 }
 
 pinuts.projectName = 'MyProject'
@@ -25,8 +25,12 @@ setup.doLast {
         ln(target, pinuts.um.confdDir)
     }
 
-    ln('cmsbs-conf/adminRoles', pinuts.um.cmsbsConfDir)
-    ln('cmsbs-conf/entryTypes', pinuts.um.cmsbsConfDir)
+    fileTree('cmsbs-conf/entryTypes').each {target ->
+        ln(target, new File(pinuts.um.cmsbsConfDir, 'entryTypes'))
+    }
+    fileTree('cmsbs-conf/adminRoles').each {target ->
+        ln(target, new File(pinuts.um.cmsbsConfDir, 'adminRoles'))
+    }
 }
 
 setup.finalizedBy vscode
