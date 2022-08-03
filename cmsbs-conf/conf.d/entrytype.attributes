@@ -1,9 +1,5 @@
-additional.attributes[]    = entrytype
-grp.std_intern.members[]   = entrytype
 
-entrytype.title.de                   = Entry Type
-entrytype.dbSize                     = 32
-entrytype.isPrimary                  = true
+
 entrytype.values[]                   = employee
 entrytype.values[]                   = shipping_company
 entrytype.values[]                   = customer
