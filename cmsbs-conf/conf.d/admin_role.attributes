@@ -1,5 +1,3 @@
 admin_role.values[] = ""
 admin_role.values[] = "employee"
 admin_role.values[] = "shipping_company"
-
-admin_role.value.   = "Super Admin"
