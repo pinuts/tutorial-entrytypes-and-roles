@@ -1,8 +1,7 @@
 /// <reference path="../../../.vscode.js"/>
 
 ApplicationCallback.registerCallback('postLogin', guiUser => {
-    var userEntry = UM.getEntryByUid(guiUser.login);
-    var country = userEntry.get('country');
+    const country = guiUser.entry.get('country');
 
     if (guiUser.adminRole == 'employee') {
         guiUser.channelLangTags = country;
